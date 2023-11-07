@@ -1,0 +1,42 @@
+{
+  "name": "grand-prix",
+  "version": "0.0.1",
+  "dependencies": {
+    "@embroider/addon-shim": "^1.0.0",
+    "@glimmer/component": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.23.2",
+    "@embroider/addon-dev": "^4.1.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-ember": "11.11.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "prettier": "2.8.8",
+    "rollup": "^4.3.0"
+  },
+  "ember-addon": {
+    "version": 2,
+    "type": "addon",
+    "main": "addon-main.js",
+    "app-js": {
+      "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js"
+    }
+  },
+  "files": [
+    "addon-main.js",
+    "dist"
+  ],
+  "keywords": [
+    "ember-addon"
+  ],
+  "scripts": {
+    "build:js": "rollup --config",
+    "start:js": "rollup --config --watch --no-watch.clearScreen",
+    "prepack": "rollup --config"
+  }
+}
