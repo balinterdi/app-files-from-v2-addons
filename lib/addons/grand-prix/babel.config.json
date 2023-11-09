@@ -1,5 +1,6 @@
 {
   "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
     "@babel/plugin-transform-class-properties",
     "@embroider/addon-dev/template-colocation-plugin"
   ]
