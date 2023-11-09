@@ -5,7 +5,13 @@ const { Webpack } = require('@embroider/webpack');
 
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
-    // Add options here
+    '@embroider/macros': {
+      setConfig: {
+        'grand-prix': {
+          device: 'desktop',
+        },
+      },
+    },
   });
 
   return require('@embroider/compat').compatBuild(app, Webpack, {});

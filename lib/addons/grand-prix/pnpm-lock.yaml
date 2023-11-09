@@ -25,6 +25,9 @@ devDependencies:
   '@embroider/addon-dev':
     specifier: ^4.1.1
     version: 4.1.1(rollup@4.3.0)
+  '@embroider/macros':
+    specifier: ^1.13.2
+    version: 1.13.2
   '@rollup/plugin-babel':
     specifier: ^6.0.4
     version: 6.0.4(@babel/core@7.23.2)(rollup@4.3.0)
