@@ -38,13 +38,12 @@
       "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js"
     },
     "public-assets": {
-      "./images/grand-prix-attack.webp": "/grand-prix/images/grand-prix-attack.webp"
+      "./../../../grand-prix/images/grand-prix-attack.webp": "/grand-prix/../../../grand-prix/images/grand-prix-attack.webp"
     }
   },
   "files": [
     "addon-main.js",
-    "dist",
-    "images"
+    "dist"
   ],
   "scripts": {
     "build:js": "rollup --config",
