@@ -50,13 +50,11 @@
   ],
   "scripts": {
     "build:js": "rollup --config",
-    "build:js:desktop": "run-s set-config-desktop build:js",
-    "build:js:mobile": "run-s set-config-mobile build:js",
-    "set-config-desktop": "cp rollup.config.desktop.mjs rollup.config.mjs",
-    "set-config-mobile": "cp rollup.config.mobile.mjs rollup.config.mjs",
-    "start:js:desktop": "run-s set-config-desktop start:js",
-    "start:js:mobile": "run-s set-config-mobile start:js",
+    "build:js:desktop": "DEVICE=desktop rollup --config",
+    "build:js:mobile": "DEVICE=mobile rollup --config",
     "start:js": "rollup --config --watch --no-watch.clearScreen",
+    "start:js:desktop": "DEVICE=desktop rollup --config --watch --no-watch.clearScreen",
+    "start:js:mobile": "DEVICE=mobile rollup --config --watch --no-watch.clearScreen",
     "prepack": "rollup --config"
   }
 }
