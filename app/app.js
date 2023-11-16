@@ -3,6 +3,8 @@ import Resolver from 'ember-resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from 'app-files-from-v2-addons/config/environment';
 
+import '/grand-prix/assets/styles/containers.css';
+
 export default class App extends Application {
   modulePrefix = config.modulePrefix;
   podModulePrefix = config.podModulePrefix;

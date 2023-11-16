@@ -39,8 +39,9 @@
       "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js"
     },
     "public-assets": {
-      "./images/ember-octane.webp": "/grand-prix/images/ember-octane.webp",
-      "./images/grand-prix-attack.webp": "/grand-prix/images/grand-prix-attack.webp"
+      "./assets/images/ember-octane.webp": "/grand-prix/assets/images/ember-octane.webp",
+      "./assets/images/grand-prix-attack.webp": "/grand-prix/assets/images/grand-prix-attack.webp",
+      "./assets/styles/containers.css": "/grand-prix/assets/styles/containers.css"
     }
   },
   "files": [
