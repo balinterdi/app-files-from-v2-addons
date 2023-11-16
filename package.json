@@ -12,7 +12,7 @@
   },
   "ember-addon": {
     "paths": [
-      "lib/addons/grand-prix"
+      "grand-prix"
     ]
   },
   "scripts": {
