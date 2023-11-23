@@ -27,8 +27,12 @@
     "eslint-plugin-ember": "11.11.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
     "prettier": "2.8.8",
-    "rollup": "^4.3.0"
+    "rollup": "^3.29.2"
   },
   "ember-addon": {
     "version": 2,
@@ -38,7 +42,9 @@
       "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js"
     },
     "public-assets": {
-      "./images/grand-prix-attack.webp": "/grand-prix/images/grand-prix-attack.webp"
+      "./assets/images/ember-octane.webp": "/grand-prix/assets/images/ember-octane.webp",
+      "./assets/images/grand-prix-attack.webp": "/grand-prix/assets/images/grand-prix-attack.webp",
+      "./assets/styles/app.css": "/grand-prix/assets/styles/app.css"
     }
   },
   "files": [
@@ -48,7 +54,17 @@
   ],
   "scripts": {
     "build:js": "rollup --config",
+    "build:js:desktop": "DEVICE=desktop rollup --config",
+    "build:js:mobile": "DEVICE=mobile rollup --config",
+    "build:css:desktop": "postcss src/desktop/styles/app.css -o assets/styles/app.css",
+    "build:css:mobile": "postcss src/mobile/styles/app.css -o assets/styles/app.css",
     "start:js": "rollup --config --watch --no-watch.clearScreen",
+    "start:js:desktop": "DEVICE=desktop rollup --config --watch --no-watch.clearScreen",
+    "start:js:mobile": "DEVICE=mobile rollup --config --watch --no-watch.clearScreen",
+    "start:css:desktop": "postcss src/desktop/styles/app.css --watch -o assets/styles/app.css",
+    "start:css:mobile": "postcss src/mobile/styles/app.css --watch -o assets/styles/app.css",
+    "start:desktop": "run-p start:js:desktop start:css:desktop",
+    "start:mobile": "run-p start:js:mobile start:css:mobile",
     "prepack": "rollup --config"
   }
 }

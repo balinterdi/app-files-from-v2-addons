@@ -1,0 +1,9 @@
+.image-container {
+  border: 2px dashed palevioletred;
+  width: fit-content;
+}
+
+.image-container > img {
+  display: block;
+  height: auto;
+}
