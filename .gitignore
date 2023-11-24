@@ -4,7 +4,7 @@
 
 # dependencies
 /node_modules/
-lib/addons/grand-prix/node_modules/
+/grand-prix/node_modules/
 
 # misc
 /.env*
