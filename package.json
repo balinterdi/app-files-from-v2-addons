@@ -10,11 +10,6 @@
     "doc": "doc",
     "test": "tests"
   },
-  "ember-addon": {
-    "paths": [
-      "lib/addons/grand-prix"
-    ]
-  },
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
@@ -36,8 +31,8 @@
     "@ember/optional-features": "^2.0.0",
     "@ember/string": "^3.1.1",
     "@ember/test-helpers": "^3.2.0",
-    "@embroider/compat": "^3.2.3",
-    "@embroider/core": "^3.3.0",
+    "@embroider/compat": "^3.3.1",
+    "@embroider/core": "^3.4.2",
     "@embroider/macros": "^1.13.2",
     "@embroider/webpack": "^3.2.0",
     "@glimmer/component": "^1.1.2",
@@ -70,6 +65,7 @@
     "eslint-plugin-n": "^16.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-qunit": "^8.0.0",
+    "grand-prix": "0.0.1",
     "loader.js": "^4.7.0",
     "postcss-import": "^15.1.0",
     "prettier": "^3.0.3",
@@ -86,5 +82,8 @@
   },
   "ember": {
     "edition": "octane"
-  }
+  },
+  "workspaces": [
+    "grand-prix"
+  ]
 }
