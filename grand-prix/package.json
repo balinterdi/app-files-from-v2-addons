@@ -33,7 +33,8 @@
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "prettier": "2.8.8",
-    "rollup": "^3.29.2"
+    "rollup": "^3.29.2",
+    "rollup-plugin-copy": "^3.5.0"
   },
   "ember-addon": {
     "version": 2,
@@ -44,6 +45,7 @@
       "./router.js": "./dist/_app_/router.js"
     },
     "public-assets": {
+      "./assets/images/caro-kann.webp": "/grand-prix/assets/images/caro-kann.webp",
       "./assets/images/ember-octane.webp": "/grand-prix/assets/images/ember-octane.webp",
       "./assets/images/grand-prix-attack.webp": "/grand-prix/assets/images/grand-prix-attack.webp",
       "./assets/styles/app.css": "/grand-prix/assets/styles/app.css"
