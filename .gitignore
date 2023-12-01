@@ -5,6 +5,7 @@
 # dependencies
 /node_modules/
 /grand-prix/node_modules/
+/router-abstract/node_modules/
 
 # misc
 /.env*

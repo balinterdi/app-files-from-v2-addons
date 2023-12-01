@@ -65,12 +65,13 @@
     "eslint-plugin-n": "^16.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-qunit": "^8.0.0",
-    "grand-prix": "0.0.1",
+    "grand-prix": "*",
     "loader.js": "^4.7.0",
     "postcss-import": "^15.1.0",
     "prettier": "^3.0.3",
     "qunit": "^2.19.4",
     "qunit-dom": "^2.0.0",
+    "router-abstract": "*",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-prettier": "^4.0.2",
@@ -84,6 +85,7 @@
     "edition": "octane"
   },
   "workspaces": [
-    "grand-prix"
+    "grand-prix",
+    "router-abstract"
   ]
 }

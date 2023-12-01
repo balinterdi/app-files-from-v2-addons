@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "@embroider/addon-shim": "^1.0.0",
-    "@glimmer/component": "^1.1.2"
+    "@glimmer/component": "^1.1.2",
+    "router-abstract": "*"
   },
   "keywords": [
     "ember-addon"
@@ -20,7 +21,7 @@
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-decorators": "^7.23.2",
     "@embroider/addon-dev": "^4.1.1",
-    "@embroider/macros": "^1.13.2",
+    "@embroider/macros": "*",
     "@rollup/plugin-babel": "^6.0.4",
     "eslint": "7.32.0",
     "eslint-config-prettier": "9.0.0",
@@ -32,16 +33,19 @@
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "prettier": "2.8.8",
-    "rollup": "^3.29.2"
+    "rollup": "^3.29.2",
+    "rollup-plugin-copy": "^3.5.0"
   },
   "ember-addon": {
     "version": 2,
     "type": "addon",
     "main": "addon-main.js",
     "app-js": {
-      "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js"
+      "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js",
+      "./router.js": "./dist/_app_/router.js"
     },
     "public-assets": {
+      "./assets/images/caro-kann.webp": "/grand-prix/assets/images/caro-kann.webp",
       "./assets/images/ember-octane.webp": "/grand-prix/assets/images/ember-octane.webp",
       "./assets/images/grand-prix-attack.webp": "/grand-prix/assets/images/grand-prix-attack.webp",
       "./assets/styles/app.css": "/grand-prix/assets/styles/app.css"
