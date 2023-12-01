@@ -5,6 +5,7 @@
 # dependencies
 /node_modules/
 /grand-prix/node_modules/
+/grand-prix/dist/
 
 # misc
 /.env*
