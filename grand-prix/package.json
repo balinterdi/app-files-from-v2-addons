@@ -4,6 +4,8 @@
   "dependencies": {
     "@embroider/addon-shim": "^1.0.0",
     "@glimmer/component": "^1.1.2",
+    "ember-template-imports": "^4.0.0",
+    "ember-route-template": "^1.0.3",
     "router-abstract": "*"
   },
   "keywords": [
@@ -42,7 +44,8 @@
     "main": "addon-main.js",
     "app-js": {
       "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js",
-      "./router.js": "./dist/_app_/router.js"
+      "./router.js": "./dist/_app_/router.js",
+      "./templates/caro-kann.js": "./dist/_app_/templates/caro-kann.js"
     },
     "public-assets": {
       "./assets/images/caro-kann.webp": "/grand-prix/assets/images/caro-kann.webp",

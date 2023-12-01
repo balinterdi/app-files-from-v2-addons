@@ -1,10 +1,17 @@
-import templateOnly from '@ember/component/template-only';
-import { precompileTemplate } from '@ember/template-compilation';
-import { setComponentTemplate } from '@ember/component';
+import { template } from '@ember/template-compiler';
+import RouteTemplate from 'ember-route-template';
 
-var TEMPLATE = precompileTemplate("<div class=\"image-container\">\n  <img src=\"/grand-prix/assets/images/caro-kann.webp\" alt=\"Caro Kann Opening\" />\n</div>");
+var caroKann = RouteTemplate(template(`
+    <h2>The Caro-Kann Opening</h2>
 
-var caroKann = setComponentTemplate(TEMPLATE, templateOnly());
+    <div class="image-container">
+      <img src="/grand-prix/assets/images/caro-kann.webp" alt="Caro Kann Opening" />
+    </div>
+  `, {
+    eval () {
+        return eval(arguments[0]);
+    }
+}));
 
 export { caroKann as default };
 //# sourceMappingURL=caro-kann.js.map
