@@ -41,9 +41,12 @@
     "main": "addon-main.js",
     "app-js": {
       "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js",
-      "./router.js": "./dist/_app_/router.js"
+      "./router.js": "./dist/_app_/router.js",
+      "./templates/caro-kann.js": "./dist/_app_/templates/caro-kann.js"
     },
     "public-assets": {
+      "./assets/images/caro-kann-opening.png": "/grand-prix/assets/images/caro-kann-opening.png",
+      "./assets/images/caro-kann.webp": "/grand-prix/assets/images/caro-kann.webp",
       "./assets/images/ember-octane.webp": "/grand-prix/assets/images/ember-octane.webp",
       "./assets/images/grand-prix-attack.webp": "/grand-prix/assets/images/grand-prix-attack.webp",
       "./assets/styles/app.css": "/grand-prix/assets/styles/app.css"
