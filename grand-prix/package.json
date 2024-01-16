@@ -42,7 +42,9 @@
     "app-js": {
       "./components/caro-kann.js": "./dist/_app_/components/caro-kann.js",
       "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js",
+      "./controllers/caro-kann.js": "./dist/_app_/controllers/caro-kann.js",
       "./router.js": "./dist/_app_/router.js",
+      "./routes/caro-kann.js": "./dist/_app_/routes/caro-kann.js",
       "./templates/caro-kann.js": "./dist/_app_/templates/caro-kann.js"
     },
     "public-assets": {

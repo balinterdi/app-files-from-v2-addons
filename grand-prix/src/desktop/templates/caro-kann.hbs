@@ -1,3 +1,13 @@
 <p class="main-message">The Caro-Kann Opening</p>
 
 <CaroKann />
+
+<p>The Caro–Kann Defence is a chess opening characterised by the moves: </p>
+
+<ul>
+  {{#each @model as |move index|}}
+    <li>{{index}}. {{move}}</li>
+  {{/each}}
+</ul>
+
+<p>{{this.description}}</p>

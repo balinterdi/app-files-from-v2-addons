@@ -56,7 +56,13 @@ export default {
     routeTemplates(["templates/**/*.hbs"]),
     // These are the modules that users should be able to import from your
     // addon. Anything not listed here may get optimized away.
-    addon.publicEntrypoints(["components/**/*.js", "router.js"]),
+    addon.publicEntrypoints([
+      "components/**/*.js",
+      "controllers/**/*.js",
+      "router.js",
+      "routes/**/*.js",
+      "templates/**/*.js",
+    ]),
 
     // This seems to be needed for the build step to update `package.json` with
     // `public-assets` which is required for images to work.
@@ -69,7 +75,9 @@ export default {
     // not everything in publicEntrypoints necessarily needs to go here.
     addon.appReexports([
       "components/**/*.js",
+      "controllers/**/*.js",
       "router.js",
+      "routes/**/*.js",
       "templates/**/*.js",
     ]),
 
