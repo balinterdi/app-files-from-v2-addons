@@ -40,6 +40,7 @@
     "type": "addon",
     "main": "addon-main.js",
     "app-js": {
+      "./components/caro-kann.js": "./dist/_app_/components/caro-kann.js",
       "./components/grand-prix.js": "./dist/_app_/components/grand-prix.js",
       "./router.js": "./dist/_app_/router.js",
       "./templates/caro-kann.js": "./dist/_app_/templates/caro-kann.js"
