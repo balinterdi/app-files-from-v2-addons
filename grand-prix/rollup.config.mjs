@@ -1,5 +1,7 @@
 // import copy from 'rollup-plugin-copy';
 import babel from "@rollup/plugin-babel";
+import { readFileSync } from "fs";
+import { hbsToJS } from "@embroider/core";
 import { Addon } from "@embroider/addon-dev/rollup";
 
 // eslint-disable-next-line no-undef
@@ -7,10 +9,43 @@ const device = process.env.DEVICE;
 
 console.log(`Building for ${device}`);
 
+const srcDir = `src/${device}`;
+
 const addon = new Addon({
-  srcDir: `src/${device}`,
+  srcDir,
   destDir: "dist",
 });
+
+// function normalizeFileExt(fileName) {
+//   return fileName.replace(/(?<!\.d)\.ts|\.hbs|\.gts|\.gjs$/, ".js");
+// }
+
+function getMeta(context, id) {
+  const meta =
+    context.getModuleInfo(id)?.meta?.["rollup-ember-route-templates-plugin"];
+  if (meta) {
+    return meta;
+  } else {
+    return null;
+  }
+}
+
+function routeTemplates() {
+  return {
+    name: "rollup-ember-route-templates-plugin",
+    load(id) {
+      console.log("routeTemplates", id);
+      if (getMeta(this, id)) {
+        const hbsFile = id.replace(/\.js$/, ".hbs");
+        let input = readFileSync(hbsFile, "utf8");
+        let code = hbsToJS(input);
+        return {
+          code,
+        };
+      }
+    },
+  };
+}
 
 export default {
   // This provides defaults that work well alongside `publicEntrypoints` below.
@@ -18,9 +53,16 @@ export default {
   output: addon.output(),
 
   plugins: [
+    routeTemplates(["templates/**/*.hbs"]),
     // These are the modules that users should be able to import from your
     // addon. Anything not listed here may get optimized away.
-    addon.publicEntrypoints(["components/**/*.js"]),
+    addon.publicEntrypoints([
+      "components/**/*.js",
+      "controllers/**/*.js",
+      "router.js",
+      "routes/**/*.js",
+      "templates/**/*.js",
+    ]),
 
     // This seems to be needed for the build step to update `package.json` with
     // `public-assets` which is required for images to work.
@@ -31,7 +73,13 @@ export default {
     // These are the modules that should get reexported into the traditional
     // "app" tree. Things in here should also be in publicEntrypoints above, but
     // not everything in publicEntrypoints necessarily needs to go here.
-    addon.appReexports(["components/**/*.js"]),
+    addon.appReexports([
+      "components/**/*.js",
+      "controllers/**/*.js",
+      "router.js",
+      "routes/**/*.js",
+      "templates/**/*.js",
+    ]),
 
     babel({ babelHelpers: "bundled" }),
 

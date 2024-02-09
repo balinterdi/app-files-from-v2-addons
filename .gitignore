@@ -6,6 +6,8 @@
 /node_modules/
 /grand-prix/node_modules/
 /grand-prix/dist/
+/router-abstract/node_modules/
+/router-abstract/dist/
 
 # misc
 /.env*

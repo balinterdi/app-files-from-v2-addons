@@ -1,13 +1,3 @@
-.image-container {
-  border: 2px dashed palevioletred;
-  width: fit-content;
-}
-
-.image-container > img {
-  display: block;
-  height: auto;
-}
-
 .main-message {
   font-size: 1.25rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
