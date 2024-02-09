@@ -1,25 +1,4 @@
-:root {
-  --main-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-body {
-  font-family: var(--main-font);
-}
-
-.image-container {
-  border: 2px dashed palevioletred;
-  width: fit-content;
-}
-
-.image-container > img {
-  display: block;
-  height: auto;
-}
-
 .main-message {
   font-size: 1.25rem;
-}
-
-.greeting {
-  font-size: 1.125rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
